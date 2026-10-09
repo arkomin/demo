@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Your Own Website · An Interactive Guide</title>
+  <meta name="description" content="A warm, interactive walkthrough showing how to ship your personal website with GitHub Pages and an AI assistant." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Decorative ambient backdrop -->
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <!-- Sticky progress bar -->
+  <div class="progress" id="progress" aria-hidden="true">
+    <div class="progress__fill" id="progressFill"></div>
+  </div>
+
+  <!-- Top navigation -->
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#hero">
+        <span class="brand__mark">◐</span>
+        <span class="brand__name">site<span class="brand__dot">.</span>craft</span>
+      </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#step-1" data-step="1"><span class="nav__num">01</span> GitHub</a>
+      <a href="#step-2" data-step="2"><span class="nav__num">02</span> Build with AI</a>
+      <a href="#step-3" data-step="3"><span class="nav__num">03</span> Deploy</a>
+      <a href="#showcase" class="nav__cta">Final result →</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> Task #1 · A guided walkthrough</p>
+      <h1 class="hero__title">
+        Creating <em>your own</em><br />
+        website<span class="hero__cursor">.</span>
+      </h1>
+      <p class="hero__lead">
+        Spin up a personal site in an afternoon — no web-hosting drama, no monthly bill.
+        Three short steps, ten warm minutes. Scroll on, or jump ahead.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#step-1">Start the guide <span aria-hidden="true">→</span></a>
+        <button class="btn btn--ghost" id="tourAutoBtn" type="button">Take a quick tour</button>
+      </div>
+
+      <ol class="hero__steps" aria-label="Overview">
+        <li>
+          <span class="hero__stepNum">01</span>
+          <strong>Sign up GitHub</strong>
+          <p>Free account, your username becomes your URL.</p>
+        </li>
+        <li>
+          <span class="hero__stepNum">02</span>
+          <strong>Build with AI</strong>
+          <p>Chat with WorkBuddy, Codex or Claude until it sings.</p>
+        </li>
+        <li>
+          <span class="hero__stepNum">03</span>
+          <strong>Deploy</strong>
+          <p>One minute later, the world can see it.</p>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Floating cards decoration -->
+    <div class="hero__cards" aria-hidden="true">
+      <div class="float-card float-card--a">
+        <span class="float-card__chip">github.com</span>
+        <strong>chloehku</strong>
+        <small>username → URL</small>
+      </div>
+      <div class="float-card float-card--b">
+        <span class="float-card__chip">commit</span>
+        <strong>Upload files</strong>
+        <small>drag & drop</small>
+      </div>
+      <div class="float-card float-card--c">
+        <span class="float-card__chip">live</span>
+        <strong>1 min</strong>
+        <small>until live ✨</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 1 -->
+  <section class="step" id="step-1" data-step="1">
+    <div class="step__head">
+      <span class="step__chip">Step 01</span>
+      <h2 class="step__title">Sign up for a free GitHub account</h2>
+      <p class="step__intro">
+        Head to <a href="https://github.com/" target="_blank" rel="noopener">github.com</a> and create your account.
+        Pick a username you actually like — because <em>username</em>.github.io is going to be your address.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card card--image" data-caption="GitHub sign-up form — email, password and username fields.">
+        <header class="card__head">
+          <span class="card__num">01 · a</span>
+          <h3>The username becomes your URL</h3>
+        </header>
+        <button class="card__zoom" data-image="images/slide2_Picture_5.png" data-caption="GitHub sign-up form. Email, password, and the username that will become your website address." aria-label="Zoom image">
+          <img src="images/slide2_Picture_5.png" alt="GitHub sign-up form with email, password and username fields filled in." loading="lazy" />
+          <span class="card__zoomHint">Click to zoom</span>
+        </button>
+        <p class="card__caption">
+          Use letters, numbers and single hyphens only. No leading or trailing dashes either.
+        </p>
+      </article>
+
+      <article class="card card--image" data-caption="The Create Repository icon on GitHub.">
+        <header class="card__head">
+          <span class="card__num">01 · b</span>
+          <h3>Create a new repository</h3>
+        </header>
+        <button class="card__zoom" data-image="images/slide3_Picture_1.png" data-caption="The green 'New' button on the GitHub repositories page — your entry point to a fresh repo." aria-label="Zoom image">
+          <img src="images/slide3_Picture_1.png" alt="GitHub 'Create a new repository' button highlighted." loading="lazy" />
+          <span class="card__zoomHint">Click to zoom</span>
+        </button>
+        <p class="card__caption">
+          On your profile, hit the green <strong>New</strong> button. One repo, public, that's all we need.
+        </p>
+      </article>
+
+      <article class="card card--image" data-caption="Naming the repository [username].github.io">
+        <header class="card__head">
+          <span class="card__num">01 · c</span>
+          <h3>Name it <code>[username].github.io</code></h3>
+        </header>
+        <button class="card__zoom" data-image="images/slide4_Picture_4.png" data-caption="The repository name field — typed as 'username.github.io' to enable GitHub Pages." aria-label="Zoom image">
+          <img src="images/slide4_Picture_4.png" alt="The repository name input box with '[username].github.io' typed inside." loading="lazy" />
+          <span class="card__zoomHint">Click to zoom</span>
+        </button>
+        <p class="card__caption">
+          That exact naming convention is what flips on <strong>GitHub Pages</strong> — your free hosting.
+        </p>
+      </article>
+
+      <article class="card card--image" data-caption="Creating a GitHub Codespace.">
+        <header class="card__head">
+          <span class="card__num">01 · d</span>
+          <h3>Spin up a Codespace</h3>
+        </header>
+        <button class="card__zoom" data-image="images/slide5_Picture_1.png" data-caption="Creating a Codespace — your in-browser editor for the project." aria-label="Zoom image">
+          <img src="images/slide5_Picture_1.png" alt="The 'Create codespace' button on a fresh GitHub repository." loading="lazy" />
+          <span class="card__zoomHint">Click to zoom</span>
+        </button>
+        <p class="card__caption">
+          A <strong>Codespace</strong> is a browser-based VS Code. No installs, no setup, just code.
+        </p>
+      </article>
+
+      <article class="card card--image" data-caption="Back to the GitHub repository page.">
+        <header class="card__head">
+          <span class="card__num">01 · e</span>
+          <h3>Head back to your GitHub page</h3>
+        </header>
+        <button class="card__zoom" data-image="images/slide6_Picture_4.png" data-caption="The GitHub repository overview — where you will upload files in Step 3." aria-label="Zoom image">
+          <img src="images/slide6_Picture_4.png" alt="The GitHub repository overview page with file tabs visible." loading="lazy" />
+          <span class="card__zoomHint">Click to zoom</span>
+        </button>
+        <p class="card__caption">
+          Keep this tab open. We'll come back to it when it's time to push your finished site live.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Step 2 -->
+  <section class="step step--alt" id="step-2" data-step="2">
+    <div class="step__head">
+      <span class="step__chip">Step 02</span>
+      <h2 class="step__title">Build your site with an AI assistant</h2>
+      <p class="step__intro">
+        Sign into <a href="https://workbuddy.ai" target="_blank" rel="noopener">WorkBuddy</a> — or any other AI coding tool
+        (Codex, Claude Code) that you have access to. Then just have a conversation about what you want.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card card--wide">
+        <header class="card__head">
+          <span class="card__num">02</span>
+          <h3>Chat until it feels right</h3>
+        </header>
+        <button class="card__zoom" data-image="images/slide8_Picture_6.png" data-caption="A live chat session with the AI, iterating on a portfolio website." aria-label="Zoom image">
+          <img src="images/slide8_Picture_6.png" alt="A chat with an AI assistant producing HTML, CSS and content for a personal website." loading="lazy" />
+          <span class="card__zoomHint">Click to zoom</span>
+        </button>
+        <p class="card__caption">
+          Tell the AI who you are, what you want on the page, and the vibe. Iterate. Don't settle for the first draft —
+          this is the fun part.
+        </p>
+        <ul class="card__tips">
+          <li><strong>Be specific.</strong> "A warm minimalist portfolio for a marketing grad, with sections for about, education, projects."</li>
+          <li><strong>Ask for files.</strong> Have the AI hand you a <code>index.html</code> (and any extras) you can download.</li>
+          <li><strong>Refine visually.</strong> Share what you don't like. "The hero is too quiet." "Make it warmer."</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Step 3 -->
+  <section class="step" id="step-3" data-step="3">
+    <div class="step__head">
+      <span class="step__chip">Step 03</span>
+      <h2 class="step__title">Deploy in one minute</h2>
+      <p class="step__intro">
+        Now take those files the AI gave you and push them to the repository you created in Step 1.
+        No terminal commands, no pipelines — just drag, drop, commit.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card card--image" data-caption="The repository page where you will upload files.">
+        <header class="card__head">
+          <span class="card__num">03 · a</span>
+          <h3>Open your repo</h3>
+        </header>
+        <button class="card__zoom" data-image="images/slide10_Picture_5.png" data-caption="Empty repository page — your cue to start uploading files." aria-label="Zoom image">
+          <img src="images/slide10_Picture_5.png" alt="An empty GitHub repository page ready to receive files." loading="lazy" />
+          <span class="card__zoomHint">Click to zoom</span>
+        </button>
+        <p class="card__caption">
+          You're back on the repo page from Step 1. Time to give it some content.
+        </p>
+      </article>
+
+      <article class="card card--image" data-caption="Click 'Upload files' to push your site.">
+        <header class="card__head">
+          <span class="card__num">03 · b</span>
+          <h3>Use the "Upload files" button</h3>
+        </header>
+        <button class="card__zoom" data-image="images/slide11_Picture_2.png" data-caption="The 'Upload files' button on the GitHub repository page." aria-label="Zoom image">
+          <img src="images/slide11_Picture_2.png" alt="The 'Upload files' button highlighted on a GitHub repo." loading="lazy" />
+          <span class="card__zoomHint">Click to zoom</span>
+        </button>
+        <p class="card__caption">
+          It lives just above the file list. Drag your <code>index.html</code> (and any <code>css</code>, <code>js</code>, images) right in.
+        </p>
+      </article>
+
+      <article class="card card--image" data-caption="Files staged for commit.">
+        <header class="card__head">
+          <span class="card__num">03 · c</span>
+          <h3>Commit your changes</h3>
+        </header>
+        <button class="card__zoom" data-image="images/slide12_Picture_1.png" data-caption="Files staged in GitHub's upload UI, ready for the commit button." aria-label="Zoom image">
+          <img src="images/slide12_Picture_1.png" alt="A list of files staged for upload in GitHub's drag-and-drop area." loading="lazy" />
+          <span class="card__zoomHint">Click to zoom</span>
+        </button>
+        <p class="card__caption">
+          Write any commit message ("first commit" is fine) and hit <strong>Commit changes</strong>.
+        </p>
+      </article>
+
+      <article class="card card--final" data-step="3">
+        <header class="card__head">
+          <span class="card__num">03 · d</span>
+          <h3>Wait a minute. That's it.</h3>
+        </header>
+        <div class="card__live">
+          <span class="card__liveDot"></span>
+          <span>Your URL: <strong id="liveUrl">chloehku.github.io</strong></span>
+          <button class="card__liveBtn" id="liveCopy" type="button">Copy URL</button>
+        </div>
+        <p class="card__caption">
+          GitHub Pages takes about a minute to publish. Then visit
+          <code>[your-username].github.io</code> — the world's your audience.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Showcase -->
+  <section class="showcase" id="showcase">
+    <div class="showcase__head">
+      <span class="step__chip step__chip--dark">The payoff</span>
+      <h2 class="showcase__title">This is what a finished site looks like.</h2>
+      <p class="showcase__intro">
+        Hover the example to peek behind the curtain — what the AI actually shipped in Step 2.
+      </p>
+    </div>
+
+    <div class="showcase__frame" id="showcaseFrame">
+      <div class="showcase__chrome">
+        <span class="dot dot--r"></span>
+        <span class="dot dot--y"></span>
+        <span class="dot dot--g"></span>
+        <span class="showcase__addr" id="showcaseAddr">chloehku.github.io</span>
+      </div>
+      <button class="showcase__zoom" data-image="images/slide14_Picture_5.png" data-caption="Chloe Chan's finished portfolio site — warm, editorial, minimal." aria-label="View larger">
+        <img src="images/slide14_Picture_5.png" alt="Chloe Chan's portfolio website, warm and editorial in tone." loading="lazy" />
+        <span class="showcase__zoomHint">View larger ↗</span>
+      </button>
+      <div class="showcase__palette">
+        <button class="swatch" data-accent="terracotta" style="--c:#E76F51" title="Terracotta"></button>
+        <button class="swatch" data-accent="sandy" style="--c:#F4A261" title="Sandy"></button>
+        <button class="swatch" data-accent="gold" style="--c:#E9C46A" title="Gold"></button>
+        <button class="swatch" data-accent="sage" style="--c:#A8B89A" title="Sage"></button>
+        <button class="swatch" data-accent="plum" style="--c:#8C5A6B" title="Plum"></button>
+        <small class="showcase__hint">Try a different palette →</small>
+      </div>
+    </div>
+
+    <div class="showcase__meta">
+      <div>
+        <strong>Build time</strong>
+        <span>~30 minutes</span>
+      </div>
+      <div>
+        <strong>Hosting cost</strong>
+        <span>$0</span>
+      </div>
+      <div>
+        <strong>Lines of code</strong>
+        <span>~400</span>
+      </div>
+      <div>
+        <strong>Maintenance</strong>
+        <span>None</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / CTA -->
+  <footer class="foot">
+    <div class="foot__inner">
+      <h3>Ready when you are.</h3>
+      <p>Click <strong>Start the guide</strong> again, or jump back to any step.</p>
+      <div class="foot__nav">
+        <a href="#step-1">Step 01</a>
+        <a href="#step-2">Step 02</a>
+        <a href="#step-3">Step 03</a>
+        <a href="#showcase">Showcase</a>
+      </div>
+      <small>Built as a live demo · warm, accessible, keyboard-friendly.</small>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close (Esc)">×</button>
+    <figure class="lightbox__figure">
+      <img id="lightboxImg" src="" alt="" />
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
